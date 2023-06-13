@@ -1,4 +1,87 @@
-.carousel {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+/* Body */
+body{
+  position: relative;
+}
+
+
+/* Header Desktop*/
+header{
+  width: 100%;
+  background: #020816;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.header{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.header .logoHeader{
+  display: flex;
+  align-items: center;
+}
+.header .logoHeader img{
+  height: 80px;
+}
+.navHeader{
+  display: flex;
+  align-items: center;
+}
+.navHeader .navegacaoHeader{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navHeader .navegacaoHeader .itemNavHeader .linkItemNavHeader{
+  padding: 8px;
+  color: #f1f1f1;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+.navHeader .navegacaoHeader .itemNavHeader .subnavHeader{
+  display: none;
+}
+.header .hamburguer {
+  display: none;
+  margin: auto 10px;
+}
+.header .hamburguer .bar {
+  display: block;
+  background-color: #f1f1f1;
+  height: 3px;
+  width: 25px;
+  margin: 5px auto;
+  border-radius: 10px;
+  transition: 1s;
+}
+/*Footer*/
+footer{
+  width: 100%;
+  background-color: #020816;
+}
+.footer{
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+.footer .logoFooter img{
+  max-width: 200px;
+}
+
+/**/
+#carrosel .carousel {
   width: 100%;
   overflow: hidden;
 }
@@ -11,4 +94,56 @@
 .carousel-item {
   flex: 0 0 100%; /* Define a largura dos itens */
   /* Estilos adicionais para os itens */
+}
+
+
+/* Carrossel */
+
+.carousel {
+  width: 50%;
+  overflow: hidden;
+}
+
+
+/* Ajustes de responsividade */
+@media (max-width: 1400px){
+}
+@media (max-width: 1200px){
+}
+@media (max-width: 992px){
+}
+@media (max-width: 768px){
+  .header .hamburguer {
+    display: block;
+    margin: auto 10px;
+  }
+  .navHeader{
+    position: fixed;
+    left: 100%;
+    top: 7.5rem;
+    flex-direction: column;
+    background-color: #020816;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 25px #000;
+  }
+  .navHeader.active{
+    left: 0;
+    top: 0;  
+    height: 100%;
+    flex-direction: column;
+  }
+  .navHeader .navegacaoHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+  }
+  .header .hamburguer {
+    /*position: absolute;*/
+  }
+}
+@media (max-width: 576px){
 }

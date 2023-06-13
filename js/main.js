@@ -1,3 +1,5 @@
+
+
 // Obtenha os elementos do DOM
 const carousel = document.querySelector('.carousel');
 const carouselContainer = document.querySelector('.carousel-container');
