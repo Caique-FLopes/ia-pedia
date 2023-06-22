@@ -8,8 +8,12 @@
 /* Body */
 body{
   position: relative;
+  background-color: #020816;
 }
 
+a, p, h1, h2, h3, h4, h5, h6, span{
+  font-family:Arial, Helvetica, sans-serif;
+}
 
 /* Header Desktop*/
 header{
@@ -72,38 +76,212 @@ footer{
 .footer{
   width: 80%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   margin: 0 auto;
 }
 .footer .logoFooter img{
   max-width: 200px;
 }
-
-/**/
-#carrosel .carousel {
-  width: 100%;
-  overflow: hidden;
-}
-
-.carousel-container {
+.navFooter{
   display: flex;
-  transition: transform 0.5s ease;
+  align-items: center;
+}
+.navFooter .navegacaoFooter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navFooter .navegacaoFooter .itemNavFooter .linkItemNavFooter{
+  padding: 8px;
+  color: #f1f1f1;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+.navFooter .navegacaoFooter .itemNavFooter .subnavFooter{
+  display: none;
+}
+.footer .contatoFooter .socialFooter i{
+  color: #f1f1f1;
+}
+.linkItemNavFooter{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f1f1f1;
+}
+.footer .contatoFooter span{
+  color: #f1f1f1;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.carousel-item {
-  flex: 0 0 100%; /* Define a largura dos itens */
-  /* Estilos adicionais para os itens */
-}
-
-
-/* Carrossel */
-
+/* Carosel */
 .carousel {
-  width: 50%;
+  width: 400px;
+  height: 300px;
+  position: relative;
   overflow: hidden;
 }
 
+/* Informacoes */
+#sec-info{
+  display: flex;
+  align-items: center;
+}
+.informacoes{
+  width: 33.33%;
+}
+/* Carousel */
+#sec-carousel{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel{
+  width: 80%;
+  border:solid 0.5px #dadada ;
+  border-radius: 25px;
+}
+#sec-carousel .swiper,
+#sec-carousel .swiper-wrapper,
+#sec-carousel .swiper-slide{
+  width: 100%;
+  height: 100%;
+}
+
+#sec-carousel .img-carousel{
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+/* card flip */
+#sec-info img{
+  width: 100%;
+}
+
+.swiper-slide.swiper-slide-visible.swiper-slide-active {
+  padding: 10px;
+}
+
+.card-flip {
+  background-color: #2e2c2c;
+  border-radius: 25px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  align-content: center;
+  padding: 40px;
+  color: #f1f1f1;
+}
+
+/* Slide Cards */
+#sec-cards{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-carrossel{
+
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.swiper{
+  width: 100%;
+  height: 100%;
+}
+
+.card{
+  position:relative; 
+  background: #2e2c2c;
+  width: 200px;
+  border-radius: 15px;
+  margin: 20px 0;
+  box-shadow: 0 5px 10px rgb(0,0,0,0.1);
+  color: #f1f1f1;
+  height: 100%;
+}
+
+.card .card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  position: relative;
+  height: 100%;
+}
+
+.section-carrossel .card .image{
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  padding: 3px;
+  background-color: #EB82FE;
+}
+
+.section-carrossel .card .image img{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card .media-icon{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 20px;
+  right: 20px;
+  align-items: center;
+  height: 40%;
+  justify-content: space-around;
+}
+
+.card .nome-ia{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card .nome-ia .nome{
+  font-size: 24px;
+  font-weight: 600;
+  padding: 2%;
+  width: max-content;
+}
+
+.card .informacao-ia{
+  margin: 5px 0;
+  text-align: center;
+}
+
+.card .button{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.card .button a{
+  background-color: #8D8DFF;
+  outline: none;
+  border: none;
+  color: #C9F0FF;
+  padding: 8px 22px;
+  border-radius: 15px;
+  font-size: 14px;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.card .button button:hover{
+  opacity: 0.3;
+}
 
 /* Ajustes de responsividade */
 @media (max-width: 1400px){
@@ -141,8 +319,14 @@ footer{
     flex-direction: column;
     position: relative;
   }
-  .header .hamburguer {
-    /*position: absolute;*/
+  .footer {
+    flex-direction: column-reverse;
+  }
+  .navFooter .navegacaoFooter{
+    flex-direction: column;
+  }
+  .informacoes{
+    width: 100%;
   }
 }
 @media (max-width: 576px){
